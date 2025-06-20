@@ -32,7 +32,7 @@ let db;
             ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
             ('carol123', 'carol@example.com', 'hashed789', 'owner'),
             ('torivega', 'toriv@example.com', 'hashed987', 'walker'),
-            ('trinavega', 'trinav@example.com', 'hashed321', 'owner');
+            ('trinavega', 'trinav@example.com', 'hashed321', 'owner')
         `);
 
     await db.execute(`
@@ -123,8 +123,8 @@ app.get('/api/walkers/summary', async (req, res) => {
 });
 
 const PORT = 8080;
-app.listen(PORT, () => ) {
+app.listen(PORT, () => {
     console.log('Server running on port ${PORT}');
-}
+});
 
 module.exports = app;
