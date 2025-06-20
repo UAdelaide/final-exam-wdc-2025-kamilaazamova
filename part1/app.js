@@ -41,7 +41,7 @@ let db;
             ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
             ((SELECT user_id FROM Users WHERE username = 'trinavega'), 'Maurice', 'large'),
             ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Julian', 'small'),
-            ((SELECT user_id FROM Users WHERE username = 'trinavega'), 'Smudge', 'medium');
+            ((SELECT user_id FROM Users WHERE username = 'trinavega'), 'Smudge', 'medium')
         `);
 
     await db.execute(`
@@ -50,13 +50,13 @@ let db;
             ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Avenue', 'accepted'),
             ((SELECT dog_id FROM Dogs WHERE name = 'Maurice'), '2025-06-11 09:45:00', 50, 'Madagascarian Jungle', 'open'),
             ((SELECT dog_id FROM Dogs WHERE name = 'Julian'), '2025-07-12 10:10:00', 40, 'Madagascars Beach', 'accepted'),
-            ((SELECT dog_id FROM Dogs WHERE name = 'Smudge'), '2025-07-15 11:11:11', 35, 'Brighton Beach', 'completed');
+            ((SELECT dog_id FROM Dogs WHERE name = 'Smudge'), '2025-07-15 11:11:11', 35, 'Brighton Beach', 'completed')
         `);
 
     await db.execute(`
         INSERT IGNORE  WalkRatings (walker_id, rating) VALUES
             ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 4),
-            ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 5);
+            ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 5)
         `);
 
     console.log('Successfully connected to the database and the test data was inserted!!');
