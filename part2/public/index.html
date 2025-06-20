@@ -69,7 +69,7 @@
                 const imageData = await imageRes.json();
                 return { ...dog, photo: imageData.message };
               } catch {
-                return { ...dog, photo: 'https://' }
+                return { ...dog, photo: 'https://placeholder.com' };
               }
             })
           )
