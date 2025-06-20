@@ -3,7 +3,7 @@ var session = require('express-session'); // added
 var bodyParser = require('body-parser'); // added
 var path = require('path');
 var mysql = require('mysql2/promise');
-const db = require('.models/db');
+const db = require('../models/db');
 
 const app = express();
 
