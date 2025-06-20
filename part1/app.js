@@ -44,7 +44,9 @@ let db;
             ((SELECT user_id FROM Users WHERE username = 'trinavega'), 'Smudge', 'medium');
         `);
 
-
+    await db.execute(`
+        
+        `)
 
 
 
