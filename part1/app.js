@@ -63,7 +63,7 @@ let db;
   } catch (err) {
     console.error('Oh nooo an error setting up sorry!!!', err);
   }
-
+})();
 
 app.use(express.static(path.join(__dirname, 'public')));
 
