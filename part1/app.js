@@ -25,6 +25,8 @@ let db;
 
     // now we insert test data for api endpoints
 
+    await db.
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
