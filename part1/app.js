@@ -77,7 +77,7 @@ app.get('/api/dogs', async (req, res) => {
             res.json(rows);
     } catch (err) {
         console.error('Sorry! Error found in the api/dogs route: ', err);
-        res.status(500)
+        res.status(500).json({ error: 'Internal server error' });
     }
 })
 
