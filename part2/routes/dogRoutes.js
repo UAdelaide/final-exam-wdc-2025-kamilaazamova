@@ -5,7 +5,9 @@ const db = require('../models/db');
 
 // GET all the dogs for the logged in owner
 router.get('/owners-dogs', async (req, res) => {
-    if 
+    if (!req.session.user || req.session.user.role !== 'owner') {
+        return res.
+    }
 });
 
 module.exports = router;
