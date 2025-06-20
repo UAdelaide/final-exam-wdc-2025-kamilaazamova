@@ -97,7 +97,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
             `);
             res.json(rows);
     } catch (err) {
-        console.error('Sorry! Error found in the api/walkrequests route: ', err);
+        console.error('Sorry! Error found in the api/walkrequests/open route: ', err);
         res.status(500).json({ error: 'Internal server error' });
     }
 });
