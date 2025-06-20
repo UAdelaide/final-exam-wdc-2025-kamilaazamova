@@ -58,7 +58,7 @@
             if (!res.ok) throw new Error('Failed to load walk requests');
             user.value = await res.json();
           } catch (err) {
-            
+            error.value = 'Could not get user information! :(';
           }
         }
 
