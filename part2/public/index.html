@@ -59,7 +59,8 @@
       },
       async mounted() {
         try {
-          const res = await
+          const res = await fetch('/api/dogs');
+          const dogList = await res.json();
         }
       }
     }).mount('#app');
