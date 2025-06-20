@@ -68,6 +68,8 @@
                 const imageRes = await fetch('https://dog.ceo/api/breeds/image/random');
                 const imageData = await imageRes.json();
                 return { ...dog, photo: imageData.message };
+              } catch {
+                return { ...dog, photo: 'https://' }
               }
             })
           )
