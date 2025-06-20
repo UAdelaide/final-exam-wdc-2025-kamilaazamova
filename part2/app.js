@@ -12,7 +12,9 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(bodyParser.urlencoded({ entended: true}));
 app.use(session({
-    secret: ''
+    secret: 'sKey',
+    resave: false,
+    saveUninitialised
 }))
 
 // Routes
