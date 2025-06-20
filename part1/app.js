@@ -68,7 +68,11 @@ let db;
 //  now we do the routes
 
 // api/dogs
-app.get('/api/dogs', async (req))
+app.get('/api/dogs', async (req, res) => {
+    try {
+        const [rows] = await db.execut
+    }
+})
 
 app.use(express.static(path.join(__dirname, 'public')));
 
