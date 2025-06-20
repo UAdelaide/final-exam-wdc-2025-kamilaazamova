@@ -79,7 +79,7 @@ app.get('/api/dogs', async (req, res) => {
         console.error('Sorry! Error found in the api/dogs route: ', err);
         res.status(500).json({ error: 'Internal server error' });
     }
-})
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 
