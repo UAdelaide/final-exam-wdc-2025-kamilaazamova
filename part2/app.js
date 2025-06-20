@@ -20,21 +20,6 @@ app.use(session({
 
 let db;
 
-(async () => {
-    try {
-        db = await mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            password: '',
-            database: 'DogWalkService'
-        });
-
-        console.log('Connected to db!');
-
-        
-    }
-})
-
 app.get('/api/dogs', async (req, res) => {
     try {
         const [rows] = await db.execute(`
