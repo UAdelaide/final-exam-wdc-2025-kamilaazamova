@@ -14,8 +14,8 @@ app.use(bodyParser.urlencoded({ entended: true}));
 app.use(session({
     secret: 'sKey',
     resave: false,
-    saveUninitialised
-}))
+    saveUninitialised: false
+}));
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
