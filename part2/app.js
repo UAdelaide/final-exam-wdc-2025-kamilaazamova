@@ -10,6 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
+// use sessions
 app.use(bodyParser.urlencoded({ entended: true}));
 app.use(session({
     secret: 'sKey',
