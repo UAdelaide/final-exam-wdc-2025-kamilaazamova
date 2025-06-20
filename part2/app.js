@@ -20,7 +20,7 @@ app.use(session({
 
 let db;
 
-
+(async)
 
 app.get('/api/dogs', async (req, res) => {
     try {
