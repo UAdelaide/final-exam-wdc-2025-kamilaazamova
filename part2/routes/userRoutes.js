@@ -82,7 +82,8 @@ router.get('/logout', (req, res) => {
     }
 
     // manually clearing cooke
-    
+    res.clearCookie('connect.sid');
+    res.redirect('/');
   })
 });
 
