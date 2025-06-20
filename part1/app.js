@@ -59,7 +59,7 @@ let db;
             ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 5),
         `);
 
-    
+    console.log('')
 
 
 app.use(express.static(path.join(__dirname, 'public')));
