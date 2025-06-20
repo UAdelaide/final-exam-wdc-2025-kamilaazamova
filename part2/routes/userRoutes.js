@@ -60,8 +60,10 @@ router.post('/login', async (req, res) => {
     // once logged in redirect to the correct dashboard
     if (user.role === 'owner') {
       return res.redirect('/owner-dashboard.html');
-    } else (user.role === 'walker') {
+    } else if (user.role === 'walker') {
       return res.redirect('/walker-dashboard.html');
+    } else {
+      return res.status(400).send('Invalid role');
     }
 
   } catch (error) {
