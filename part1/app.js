@@ -122,7 +122,9 @@ app.get('/api/walkers/summary', async (req, res) => {
     }
 });
 
-
-const PORT = 8080
+const PORT = 8080;
+app.listen(PORT, () => ) {
+    
+}
 
 module.exports = app;
