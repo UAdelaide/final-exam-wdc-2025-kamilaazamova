@@ -23,6 +23,8 @@ let db;
       database: 'DogWalkService'
     });
 
+    // now we insert test data for api endpoints
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
