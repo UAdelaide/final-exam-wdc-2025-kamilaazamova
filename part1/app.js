@@ -102,6 +102,28 @@ app.get('/api/walkrequests/open', async (req, res) => {
     }
 });
 
+// api/walkrequests/open
+app.get('/api/walkrequests/open', async (req, res) => {
+    try {
+        const [rows] = await db.execute(`
+            SELECT wr.request_id,
+                    Dogs.name AS dog_name,
+                    wr.requested_time,
+                    wr.duration_minutes,
+                    wr.location,
+                    Users.username AS owner_username
+            FROM WalkRequests wr JOIN Dogs ON wr.dog_id = Dogs.dog_id
+            JOIN Users ON Dogs.owner_id = Users.user_id
+            WHERE wr.status = 'open'
+            `);
+            res.json(rows);
+    } catch (err) {
+        console.error('Sorry! Error found in the api/walkrequests/open route: ', err);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 module.exports = app;
