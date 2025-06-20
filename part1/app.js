@@ -45,7 +45,7 @@ let db;
         `);
 
     await db.execute(`
-        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
+        INSERT IGNORE INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
             ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
             ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Avenue', 'accepted'),
             ((SELECT dog_id FROM Dogs WHERE name = 'Maurice'), '2025-06-11 09:45:00', 50, 'Madagascarian Jungle', 'open'),
@@ -53,7 +53,9 @@ let db;
             ((SELECT dog_id FROM Dogs WHERE name = 'Smudge'), '2025-07-15 11:11:11', 35, 'Brighton Beach', 'completed');
         `);
 
-    a
+    await db.execute(`
+        INSERT IGNORE  WalkRating
+        `)
 
 
 
