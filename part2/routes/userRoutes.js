@@ -59,7 +59,9 @@ router.post('/login', async (req, res) => {
 
     // once logged in redirect to the correct dashboard
     if (user.role === 'owner') {
-      return res.redirect()
+      return res.redirect('/ownder-dashboard.html');
+    } else if (user.role === 'walker') {
+      
     }
 
   } catch (error) {
