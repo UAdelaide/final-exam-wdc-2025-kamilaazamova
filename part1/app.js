@@ -90,6 +90,8 @@ app.get('/api/walkrequests/open', async (req, res) => {
                     wr.requested_time,
                     wr.duration_minutes,
                     wr.location,
+                    Users.username AS owner_username
+            FROM WalkRequests wr JOIN Dogs ON wr.dog_id
             `);
             res.json(rows);
     } catch (err) {
