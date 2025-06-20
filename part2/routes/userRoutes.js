@@ -63,7 +63,7 @@ router.post('/login', async (req, res) => {
     } else if (user.role === 'walker') {
       return res.redirect('/walker-dashboard.html');
     } else {
-      return.res.status(400).send('')
+      return res.status(400).send('Invalid role');
     }
 
   } catch (error) {
