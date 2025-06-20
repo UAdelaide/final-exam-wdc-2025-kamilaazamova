@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
 // use sessions
-app.use(bodyParser.urlencoded({ entended: true}));
+app.use(bodyParser.urlencoded({ extended: true}));
 app.use(session({
     secret: 'tempKey',
     resave: false,
