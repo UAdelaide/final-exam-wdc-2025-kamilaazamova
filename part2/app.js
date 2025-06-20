@@ -24,7 +24,9 @@ let db;
     try {
         db = await mysql.createConnection({
             host: 'localhost',
-            user: 'root'
+            user: 'root',
+            password: '',
+            database: 'DogWalkService'
         })
     }
 })
