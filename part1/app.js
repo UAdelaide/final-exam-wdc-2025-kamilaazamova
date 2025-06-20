@@ -81,7 +81,7 @@ app.get('/api/dogs', async (req, res) => {
     }
 });
 
-// api.walkrequests/open
+// api/walkrequests/open
 app.get('/api/walkrequests/open', async (req, res) => {
     try {
         const [rows] = await db.execute(`
@@ -93,11 +93,11 @@ app.get('/api/walkrequests/open', async (req, res) => {
                     Users.username AS owner_username
             FROM WalkRequests wr JOIN Dogs ON wr.dog_id = Dogs.dog_id
             JOIN Users ON Dogs.owner_id = Users.user_id
-            WHERE wr.status = 'open';
+            WHERE wr.status = 'open'
             `);
             res.json(rows);
     } catch (err) {
-        console.error('Sorry! Error found in the api/dogs route: ', err);
+        console.error('Sorry! Error found in the api/walkrequests route: ', err);
         res.status(500).json({ error: 'Internal server error' });
     }
 });
