@@ -1,6 +1,6 @@
 const express = require('express');
-const session = require('express-session');
-const bodyParser = require('body-parser');
+const session = require('express-session'); // added
+const bodyParser = require('body-parser'); // added
 const path = require('path');
 require('dotenv').config();
 
