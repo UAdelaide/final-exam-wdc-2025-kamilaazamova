@@ -25,7 +25,8 @@ let db;
 
     // now we insert test data for api endpoints
 
-    await db.
+    await db.execute(`
+        INSERT IGNORE INTO Dogs(owner_id, name, size)`)
 
 
 app.use(express.static(path.join(__dirname, 'public')));
