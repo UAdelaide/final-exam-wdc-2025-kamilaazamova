@@ -123,6 +123,6 @@ app.get('/api/walkers/summary', async (req, res) => {
 });
 
 
-app.use(express.static(path.join(__dirname, 'public')));
+const PORT = 8080
 
 module.exports = app;
