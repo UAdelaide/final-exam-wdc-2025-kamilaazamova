@@ -20,6 +20,8 @@ app.use(session({
 
 let db;
 
+
+
 app.get('/api/dogs', async (req, res) => {
     try {
         const [rows] = await db.execute(`
