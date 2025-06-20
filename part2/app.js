@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 // use sessions
 app.use(bodyParser.urlencoded({ entended: true}));
 app.use(session({
-    secret: 'sKey',
+    secret: 'tempKey',
     resave: false,
     saveUninitialised: false
 }));
