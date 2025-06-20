@@ -2,9 +2,6 @@ const express = require('express');
 const session = require('express-session'); // added
 const bodyParser = require('body-parser'); // added
 const path = require('path');
-
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
 var mysql = require('mysql2/promise');
 
 let db;
