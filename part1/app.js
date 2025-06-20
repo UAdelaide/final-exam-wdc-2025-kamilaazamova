@@ -61,7 +61,7 @@ let db;
 
     console.log('Successfully connected to the database and the test data was inserted!!');
   } catch (err) {
-    console.error('Oh nooo an error setting up sorry!!!')
+    console.error('Oh nooo an error setting up sorry!!!', err);
   }
 
 
