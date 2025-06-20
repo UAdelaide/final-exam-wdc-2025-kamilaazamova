@@ -56,7 +56,9 @@
                             const data = await response.json();
                             this.dogImageUrl = data.message;
                             document.getElementById('dogImage').src = this.dogImageUrl; // accessibility vio no alt text
-                        } catch (err)
+                        } catch (err) {
+                            console.error("Error fetching dog image: ", error);
+                        }
                     }
                 }
             })
