@@ -32,9 +32,9 @@
     <hr class="my-5">
     <h2 class="text-secondary">All Registered Dogs</h2>
     <div class="row" v-if="dogs.length">
-      <div class="col-md-4 mb-4" v-for="dog in dogs" :key"dog.dog_name">
+      <div class="col-md-4 mb-4" v-for="dog in dogs" :key="dog.dog_name">
         <div class="card shadow-sm">
-          <img :src="dog.photo" class="card-img-top"
+          <img :src="dog.photo" class="card-img-top" alt="Image of dog">
         </div>
       </div>
     </div>
