@@ -68,7 +68,7 @@ let db;
 //  now we do the routes
 
 // api/dogs
-
+app.get
 
 app.use(express.static(path.join(__dirname, 'public')));
 
