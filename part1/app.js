@@ -16,7 +16,7 @@ let db;
 (async () => {
   try {
     // Connect to DogWalkService database
-    const connection = await mysql.createConnection({
+    db = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
       password: '' // Set your MySQL root password
