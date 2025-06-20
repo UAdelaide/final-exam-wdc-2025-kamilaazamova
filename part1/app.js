@@ -76,7 +76,8 @@ app.get('/api/dogs', async (req, res) => {
             `);
             res.json(rows);
     } catch (err) {
-        console.error('Error')
+        console.error('Sorry! Error found in the api/dogs route: ', err);
+        res.status(500)
     }
 })
 
