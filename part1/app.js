@@ -15,7 +15,7 @@ let db;
 
 (async () => {
   try {
-    // Connect to MySQL without specifying a database
+    // Connect to DogWalkService database
     const connection = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
