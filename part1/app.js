@@ -59,7 +59,10 @@ let db;
             ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 5),
         `);
 
-    console.log('')
+    console.log('Successfully connected to the database and the test data was inserted!!');
+  } catch (err) {
+    
+  }
 
 
 app.use(express.static(path.join(__dirname, 'public')));
