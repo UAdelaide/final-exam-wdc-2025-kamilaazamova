@@ -34,7 +34,7 @@
     <div class="row" v-if="dogs.length">
       <div class="col-md-4 mb-4" v-for="dog in dogs" :key="dog.dog_name">
         <div class="card shadow-sm">
-          <img :src="dog.photo || 'https://via.placeholder.com/150" class="card-img-top" alt="Image of dog">
+          <img :src="dog.photo" class="card-img-top" alt="Image of dog">
           <div class="card-body">
             <h5 class="card-title">{{dog.dog_name}}</h5>
             <p class="card-text">
