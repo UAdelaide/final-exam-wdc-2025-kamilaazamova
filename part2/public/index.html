@@ -61,6 +61,10 @@
         try {
           const res = await fetch('/api/dogs');
           const dogList = await res.json();
+
+          const dogsWithPhotos = await Promise.all(
+            dogList.map
+          )
         }
       }
     }).mount('#app');
