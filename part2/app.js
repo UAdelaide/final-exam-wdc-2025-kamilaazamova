@@ -3,7 +3,6 @@ var session = require('express-session'); // added
 var bodyParser = require('body-parser'); // added
 var path = require('path');
 var mysql = require('mysql2/promise');
-const db = require('../models/db');
 
 const app = express();
 
@@ -18,19 +17,6 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
-
-app.get('/api/dogs', async (req, res) => {
-    try {
-        const [rows] = await db.execute(`
-            SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username
-            FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id
-            `);
-            res.json(rows);
-    } catch (err) {
-        console.error('Sorry! Error found in the api/dogs route: ', err);
-        res.status(500).json({ error: 'Internal server error' });
-    }
-});
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
