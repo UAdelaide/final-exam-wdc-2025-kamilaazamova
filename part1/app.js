@@ -56,7 +56,7 @@ let db;
     await db.execute(`
         INSERT IGNORE  WalkRatings (walker_id, rating) VALUES
             ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 4),
-            
+            ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 4),
         `)
 
 
