@@ -18,13 +18,6 @@ app.use(session({
     saveUninitialised: false
 }));
 
-// Routes
-const walkRoutes = require('./routes/walkRoutes');
-const userRoutes = require('./routes/userRoutes');
-
-app.use('/api/walks', walkRoutes);
-app.use('/api/users', userRoutes);
-
 app.get('/api/dogs', async (req, res) => {
     try {
         const [rows] = await db.execute(`
@@ -37,6 +30,13 @@ app.get('/api/dogs', async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 });
+
+// Routes
+const walkRoutes = require('./routes/walkRoutes');
+const userRoutes = require('./routes/userRoutes');
+
+app.use('/api/walks', walkRoutes);
+app.use('/api/users', userRoutes);
 
 // Export the app instead of listening here
 module.exports = app;
