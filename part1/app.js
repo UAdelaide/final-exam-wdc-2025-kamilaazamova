@@ -24,7 +24,8 @@ let db;
     });
 
     // now we insert test data for api endpoints
-
+    // first three taken from previous question
+    // then need to complete other 2 tables
     await db.execute(`
         INSERT INTO Users (username, email, password_hash, role) VALUES
         ('alice123', 'alice@example.com', 'hashed123', 'owner'),
@@ -33,7 +34,7 @@ let db;
         ('torivega', 'toriv@example.com', 'hashed987', 'walker'),
         ('trinavega', 'trinav@example.com', 'hashed321', 'owner');
         `)
-        
+
     await db.execute(`
         INSERT IGNORE INTO Dogs(owner_id, name, size) VALUES
             ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium'),
