@@ -56,7 +56,7 @@ let db;
     await db.execute(`
         INSERT IGNORE  WalkRatings (walker_id, rating) VALUES
             ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 4),
-            ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 5),
+            ((SELECT user_id FROM Users WHERE username = 'bobwalker'), 5);
         `);
 
     console.log('Successfully connected to the database and the test data was inserted!!');
