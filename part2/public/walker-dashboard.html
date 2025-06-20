@@ -55,7 +55,7 @@
         async function getCurrentUser() {
           try {
             const res = await fetch('/api/users/me');
-            if (!res.ok) throw new Error('Failed to load');
+            if (!res.ok) throw new Error('Failed to fetch user!');
             user.value = await res.json();
           } catch (err) {
             error.value = 'Could not get user information! :(';
