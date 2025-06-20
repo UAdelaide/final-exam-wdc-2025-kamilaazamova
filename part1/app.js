@@ -75,7 +75,9 @@ app.get('/api/dogs', async (req, res) => {
             FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id
             `);
             res.json(rows);
-    } catch 
+    } catch (err) {
+        console.error('Error')
+    }
 })
 
 app.use(express.static(path.join(__dirname, 'public')));
