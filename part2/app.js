@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true}));
 app.use(session({
     secret: 'tempKey',
     resave: false,
-    saveUninitialised: false
+    saveUninitialized: false
 }));
 
 app.get('/api/dogs', async (req, res) => {
