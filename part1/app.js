@@ -65,6 +65,10 @@ let db;
   }
 })();
 
+//  now we do the routes
+
+
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 module.exports = app;
