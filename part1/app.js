@@ -81,7 +81,8 @@ app.get('/api/dogs', async (req, res) => {
     }
 });
 
-// api.walrequests
+// api.walrequests/open
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
