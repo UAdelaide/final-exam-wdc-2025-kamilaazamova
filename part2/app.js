@@ -29,7 +29,9 @@ let db;
             database: 'DogWalkService'
         });
 
-        console.log
+        console.log('Connected to db!');
+
+        
     }
 })
 
