@@ -1,10 +1,8 @@
-const express = require('express');
-const session = require('express-session'); // added
-const bodyParser = require('body-parser'); // added
-const path = require('path');
+var express = require('express');
+var session = require('express-session'); // added
+var bodyParser = require('body-parser'); // added
+var path = require('path');
 var mysql = require('mysql2/promise');
-
-let db;
 
 const app = express();
 
