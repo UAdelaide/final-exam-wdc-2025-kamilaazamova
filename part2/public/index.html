@@ -79,7 +79,10 @@
                 const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
                 console.log('Dogs API: ', dogList);
                 const imgData = await imgRes.json();
-                return { ...dog, photo: imgData.message };
+                return {
+                  dog_id: dog_dog.id,
+                  
+                 };
               } catch {
                 console.error('Error loading dogs', err);
               }
