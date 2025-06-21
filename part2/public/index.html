@@ -31,21 +31,7 @@
 
     <hr class="my-5">
     <h2 class="text-secondary">All Registered Dogs</h2>
-    <div class="row" v-if="dogs.length">
-      <div class="col-md-4 mb-4" v-for="dog in dogs" :key="dog.dog_name">
-        <div class="card shadow-sm">
-          <img :src="dog.photo || 'https://via.placeholder.com/150'" class="card-img-top" alt="Dog photo">
-          <div class="card-body">
-            <h5 class="card-title">{{dog.dog_name}}</h5>
-            <p class="card-text">
-              <strong>Size:</strong> {{dog.size}} <br>
-              <strong>Owner:</strong> {{dog.owner_username}}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p v-else class="text-muted">Loading dogs...</p>
+
   </div>
 
 
