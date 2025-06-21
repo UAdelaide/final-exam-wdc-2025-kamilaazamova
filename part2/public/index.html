@@ -80,11 +80,11 @@
                 console.log('Dogs API: ', dogList);
                 const imgData = await imgRes.json();
                 return {
-                  dog_id: dog_dog.id,
+                  dog_id: dog.dog_id,
                   dog_name: dog.dog_name,
                   size: dog.size,
                   owner_username: dog.owner_username,
-                  photo: imgJson.message
+                  photo: imgData.message
                  };
               } catch {
                 console.error('Error loading dogs', err);
